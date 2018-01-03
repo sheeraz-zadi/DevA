@@ -48,9 +48,6 @@ namespace DevA
             stringList.Add("B");
             stringList.Add("A");
 
-            BubbleSort(list, (arg1, arg2) => arg1 > arg2);
-
-            BubbleSort(stringList, (arg1, arg2) => string.Compare(arg1,arg2) == 1);
            
             Console.WriteLine("DONE");
 

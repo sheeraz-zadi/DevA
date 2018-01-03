@@ -8,12 +8,7 @@ namespace DevA
         {
             Console.WriteLine("Start");
 
-            //
-            //RunableClass runable = new {ClassName}();
-            //Change {ClassName} To class that you want to run
-            //
-
-            RunableClass runable = new InsertionSortClass();
+            RunableClass runable = new MergeSortClass();
             runable.Run();
 
             Console.Write("Press any key to continue...");

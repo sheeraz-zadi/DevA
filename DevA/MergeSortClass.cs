@@ -24,9 +24,9 @@ namespace DevA
                 firstHalf[i] = array[begin + i];
             }
             for (j = 0; j < SizeSecondHalf; j++) {
-                secondHalf[j] = array[middle + j];
+                secondHalf[j] = array[middle + j+1];
             }
-            Console.WriteLine("firstHalf=" + string.Join(",", firstHalf) + " - secondHalf=" + string.Join(",", secondHalf));
+
 
             firstHalf[SizeFirstHalf] = int.MaxValue;
             secondHalf[SizeSecondHalf] = int.MaxValue;
@@ -35,7 +35,7 @@ namespace DevA
 
             i = j = 0;
 
-            for (int k = begin; k < end; k++) {
+            for (int k = begin; k <= end; k++) {
                 if (firstHalf[i] <= secondHalf[j])
                 {
                     array[k] = firstHalf[i];
@@ -68,7 +68,7 @@ namespace DevA
         public void Run()
         {
             int[] testArray = new int[] { 3, 5, 6, 8, 9, 1 };
-            MergeSort(testArray, 0, testArray.Length);
+            MergeSort(testArray, 0, testArray.Length-1);
         }
     }
 }
